@@ -1,28 +1,37 @@
 <template>
   <div id="app">
+    
+    
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-      
     </div>
+  
    <!-- <router-view/>-->
-    <telaInicial></telaInicial>
-    <Adm></Adm>
+  <telaInicial> </telaInicial>
+  <Adm> </Adm>
+ 
+ 
+    
   </div>
 </template>
 
 <script>
-import telaInicial from  './views/telaInicial.vue'
-import Adm from './views/Adm.vue'
+import telaInicial from './views/telaInicial.vue'
+import Adm from'./views/Adm.vue'
+import teste from './components/teste.vue'
+
 
 export default {
   name: "App",
+
   components: {
     telaInicial,
     Adm
+    
   },
   
-}
+};
 </script>
 
 <style>
