@@ -1,11 +1,14 @@
 <template>
   
   <div id="App">
+      <img id="planoFundo" src="@/assets/Imagens/campo.jpg" alt=" falha..">
     <div class="container">
      
       <div class="row"><!-- LINHA 2-->
                     <div class="col-md-8 divMenuNav">
-                        <ul class="list-group list-group-horizontal divlistaMenu">   
+                        <h6 id="nomeTime">&nbsp;&nbsp;&nbsp;TOP TEAM FUTEBOL CLUB</h6>  
+                        <img id="escudo" src="@/assets/Imagens/2.png" alt="falha..."><br> 
+                        <ul class="list-group list-group-horizontal divlistaMenu">  
                            <a href="cadastroTor.html"><li id="divlistaMenu">&nbsp;&nbsp;&nbsp;&nbsp;SEJA TORCEDOR </li></a>                        
                             <a href=""><li id="divlistaMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;HISTORIA</li></a> 
@@ -70,28 +73,19 @@
 
                          </ul>
 
+                         <ul>
+                             
+                         </ul>
+
                          <ul id="rodapepagina">                
                                  <li id="rodapesite">
                                            www.topteamoficial.com.br
                                  </li>
                           </ul>
-
-                           
-                          
-
-                       
-                                     
+          
                         </ul>
-                       
-                       
-                        
-
-                         
-
     </div>
-    
-    
-    <img src="assets/Imagens/2.png" alt="falha...">
+
   </div>
 
 </template>
@@ -104,13 +98,38 @@ export default {
 </script>
 
 <style>
+#planoFundo{
+    position: absolute;
+    height:1100px; /*ALTURA*/
+    min-width: 150%;/*LARGURA*/ 
+    margin-left:-100%;
+     
+    box-sizing: content-box;
+}   
 .container {
     border: 3px solid yellowgreen;
     min-height: 1000px;/*ALTURA MINIMA*/
    /* min-width: 80%;*/
    width: 100%;/*LARGURA*/
    /* height: 1248px;/*ALTURA*/
-         
+}
+#nomeTime{/*CONFIGURAÇÃO DO NOME */
+    margin-left: 52%;/*MARGEM ESQUERDA*/
+    width: 300px;/*LARGURA*/
+    height: 100px;/*ALTURA*/
+    margin-top: 2%;
+    color:black;
+    font-size: 20px;
+    position:absolute;
+    list-style: none;/*Tira o ponto da lista*/
+    text-shadow: 1px 1px 1px orange, -1px 1px 1px orange,1px -1px 1px orange,1px 1px 1px orange,
+    -1px -1px 1px orange;/*EFEITO COM SOMBRAS PARA DA O CONTORNO DO NOME DO TIME*/
+}
+
+#escudo{
+    margin-left: 50%;
+    margin-top: 5%;
+    width: 30%;/* LARGURA*/
 }
 
 /*-------------------------------- DIV MENU NAV (SEJA SORCIO / HISTORIA / CONQUISTAS)--------------------------------*/
@@ -118,7 +137,7 @@ export default {
 .divlistaMenu {
     list-style: none;/*REMOVENDO OS PONTOS DOS ITENS DA LISTA*/
     position: absolute;      
-    top: 25%;
+    top: 100%;
     margin-left: 70%;  
 }
 
@@ -145,7 +164,7 @@ export default {
     position: absolute;      
     top: 50px;
     margin-left: 5%;   
-    margin-top: 10%;
+    margin-top: 18%;
     padding:3px;/*ESPAÇAMENTO VERTICAL ENTRE OS ITENS DA LISTA*/
     height: 350px;/*ALTURA*/
     width:  290px; /*LARGURA*/
@@ -235,7 +254,7 @@ export default {
 .divAncora{
     list-style: none;/*REMOVENDO OS PONTOS DOS ITENS DA LISTA*/
     position: absolute;      
-    margin-top: 150%;
+    margin-top: 130%;
     margin-left: 0%;   
     padding: 2px;/*ESPAÇAMENTO VERTICAL ENTRE OS ITENS DA LISTA*/
     height: 350px;/*ALTURA*/
@@ -350,7 +369,7 @@ export default {
     position: absolute;
     height: -6px;
     margin-left: 60%;
-    margin-top: 85%;
+    margin-top: 52%;
     color:black;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     border: solid 1px;
