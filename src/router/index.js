@@ -92,25 +92,47 @@ const routes = [
 
   /*---------------------------------------------------------------------------------------------------------*/
   {
-    path: '/listJogadoresPub',
-    name: 'listJogadoresPub',
+    path: '/jogadoresPub',
+    name: 'jogadoresPub',
     
     component: function () {
-      return import('../views/listJogadoresPub.vue')
+      return import('../views/jogadoresPub.vue')
     } 
   },
 
 
   {
     path: '/',
-    name: 'listJogadoresPub',
+    name: 'jogadoresPub',
     
     component: function () {
-      return import('../views/listJogadoresPub.vue')
+      return import('../views/jogadoresPub.vue')
     } 
   },
 
   /*---------------------------------------------------------------------------------------------------------*/
+  {
+    path: '/listTorcedores',
+    name: 'listTorcedores',
+    
+    component: function () {
+      return import('../views/listTorcedores.vue')
+    } 
+  },
+
+
+  {
+    path: '/',
+    name: 'listTorcedores',
+    
+    component: function () {
+      return import('../views/listTorcedores.vue')
+    } 
+  },
+
+  /*---------------------------------------------------------------------------------------------------------*/
+
+  
 
 ]
 

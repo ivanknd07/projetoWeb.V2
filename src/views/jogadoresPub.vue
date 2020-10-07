@@ -1,47 +1,43 @@
 <template>
-<div>
-    <img id="planoFundo" src="@/assets/Imagens/torcedorF.jpg" alt="falha...">
-                    
+  <div>
+    teste
+  
+
+
+   
+     <img id="planoFundo" src="@/assets/Imagens/torcedorF.jpg" alt="falha...">
+
     <ul  id="nomeTimeCadJogador">
         <li>
-             TOP TEAM FUTEBOL CLUB
-        </li>
+           <h6> TOP TEAM FUTEBOL CLUB </h6> 
+       </li>
     </ul>
 
     <ul id="escudoCadJogador">                 
         <li id="escudoCadJogador"> <img id="img" src="@/assets/Imagens/2.png" alt="falha"> </li>                 
   </ul>
-  <div id="cadastroJog"> 
     <table class= "container" id="table"> 
         <tr>
             <th> Nome </th>
-            <th> CPF </th>
             <th> Nascimento </th>
             <th> Endereco </th>
-            <th> numero </th>
-            <th> bairro </th>
+            <th> BAIRRO </th>
             <th> cidade </th>
-            <th> cep </th>
-            <th> telefone </th>
-            <th> email </th>
             <th> posicao </th>
-            <th> Salario</th>
             <th> contrato </th>
             <th> status </th>
         </tr>
     </table>
     <li id="botaovoltar" >
-        <input type="button" id="botao_amd" value="VOLTAR para ADM" onclick="window.location='adm.html' ">
-        <input type="button" id="botao_amd" value="apagar todos os cadastros" onclick="limpar()">
+        <input type="button" id="botao_amd" class="botaovoltar" value="INICIO" onclick="window.location='telaInicial.html' ">
     </li>
+      
   </div>
-</div>
-  
 </template>
 
 <script>
 export default {
-    name: "listaDeJogadores",
+  name: "jogadoresPub",
 
 }
 </script>
@@ -50,19 +46,17 @@ export default {
 #planoFundo{
     position: absolute;
     height:1100px; /*ALTURA*/
-    min-width: 150%;/*LARGURA*/ 
+    min-width: 149%;/*LARGURA*/ 
     margin-left:-100%;
      
     box-sizing: content-box;
-
-
 }
 
 #nomeTimeCadJogador{
     margin-left: 37%;/*MARGEM ESQUERDA*/
     width: 100 px;/*ALTURA*/
     height: 300px;/*LARGURA*/
-    margin-top: 1%;
+    margin-top: 0%;
     color:black;
     font-size: 20px;
     position:absolute;
@@ -73,7 +67,7 @@ export default {
 
 #escudoCadJogador{
     margin-left: 35%;/*MARGEM ESQUERDA*/
-    margin-top: 20px; /*MARGEM EM CIMA*/
+    margin-top: 15px; /*MARGEM EM CIMA*/
     width: 30px;  /*LARGURA*/
     height: 10px;/*ALTURA*/  
     position: absolute;
@@ -83,8 +77,9 @@ export default {
      width: 150px;
      height: 150px;
      object-fit: fill;
-     margin-left: 200%;
+     margin-left:150%;
 }
+
 table{
     background-color: antiquewhite;
     position: absolute;
@@ -114,8 +109,27 @@ td {
 
 }
 
-#botaovoltar{
+.botaovoltar{
     position: absolute;
+    list-style: none;/*PRA SUMIR COM OS MARCADORES DAS LISTAS*/
+    margin-left: -50%;
+    border-radius: 10px;
+
+    
+    
+    background-color:orangered;
+    border-color: orangered;
+    cursor: pointer;
+    
 }
+
+.botaovoltar:hover {
+    background-color:blue;
+    color:white;
+    border-radius: 10px;
+    border-color: white;
+
+}
+
 
 </style>

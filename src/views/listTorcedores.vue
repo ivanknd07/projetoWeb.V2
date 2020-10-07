@@ -1,68 +1,57 @@
 <template>
-<div>
-    <img id="planoFundo" src="@/assets/Imagens/torcedorF.jpg" alt="falha...">
-                    
+    <div>
+         <img id="planoFundo" src="@/assets/Imagens/torcedorF.jpg" alt="falha...">
+
     <ul  id="nomeTimeCadJogador">
-        <li>
-             TOP TEAM FUTEBOL CLUB
-        </li>
+        <li> TOP TEAM FUTEBOL CLUB </li>
     </ul>
 
     <ul id="escudoCadJogador">                 
         <li id="escudoCadJogador"> <img id="img" src="@/assets/Imagens/2.png" alt="falha"> </li>                 
   </ul>
-  <div id="cadastroJog"> 
     <table class= "container" id="table"> 
         <tr>
             <th> Nome </th>
-            <th> CPF </th>
+            <th> Sexo </th>
             <th> Nascimento </th>
-            <th> Endereco </th>
-            <th> numero </th>
+            <th> CPF </th>
+            <th> Email </th>
+            <th> telefoneL </th>
+            <th> endereço </th>
             <th> bairro </th>
             <th> cidade </th>
-            <th> cep </th>
-            <th> telefone </th>
-            <th> email </th>
-            <th> posicao </th>
-            <th> Salario</th>
-            <th> contrato </th>
-            <th> status </th>
         </tr>
     </table>
     <li id="botaovoltar" >
-        <input type="button" id="botao_amd" value="VOLTAR para ADM" onclick="window.location='adm.html' ">
-        <input type="button" id="botao_amd" value="apagar todos os cadastros" onclick="limpar()">
+        <input type="button" id="botao_amd" class="botaovoltar" value="VOLTAR para ADM" onclick="window.location='adm.html' ">
     </li>
-  </div>
-</div>
+    </div>
   
 </template>
 
 <script>
 export default {
-    name: "listaDeJogadores",
+    name: "listTorcedores",
 
 }
+
 </script>
 
 <style>
-#planoFundo{
+    #planoFundo{
     position: absolute;
     height:1100px; /*ALTURA*/
     min-width: 150%;/*LARGURA*/ 
     margin-left:-100%;
      
     box-sizing: content-box;
-
-
 }
 
 #nomeTimeCadJogador{
     margin-left: 37%;/*MARGEM ESQUERDA*/
     width: 100 px;/*ALTURA*/
     height: 300px;/*LARGURA*/
-    margin-top: 1%;
+    margin-top: 0%;
     color:black;
     font-size: 20px;
     position:absolute;
@@ -114,8 +103,27 @@ td {
 
 }
 
-#botaovoltar{
+.botaovoltar{
     position: absolute;
+    list-style: none;/*PRA SUMIR COM OS MARCADORES DAS LISTAS*/
+    margin-top: 1%;
+    margin-left: -50%;
+    border-radius: 10px;
+
+    
+    
+    background-color:orangered;
+    border-color: orangered;
+    cursor: pointer;
+    
+}
+
+.botaovoltar:hover {
+    background-color:blue;
+    color:white;
+    border-radius: 10px;
+    border-color: white;
+
 }
 
 </style>
