@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    
+  <!-- <carrossel/> -->
   
    <router-view/> 
     
@@ -8,11 +8,13 @@
 </template>
 
 <script>
+/*import carrossel from "./views/carrossel.vue";*/
 
 export default {
   name: "App",
 
   components: {
+   /* carrossel*/
   },
   
 };

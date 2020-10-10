@@ -10,7 +10,7 @@
            </ul> 
 
            <ul id="listaMenuAdm">
-               <a href=""><li id="itemListaAdm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <!-- <a href=""><li id="itemListaAdm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DIRETORIA</li></a>
                <a href=""><li id="itemListaAdm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMISSÃO TECNICA</li></a>
                <a href="cadJogador.html"><li id="itemListaAdm">CADASTRO DE JOGADORES</li></a>
@@ -22,10 +22,37 @@
                 PATROCINADORES</li></a>
                <a href="listTorcedores.html"><li id="itemListaAdm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TORCEDORES</li></a>
+                --> 
+                <li id="itemListaAdm">
+                    <router-link id="texDec" to="/"> D I R E T O R I A </router-link>
+                </li>
+
+                <li id="itemListaAdm">
+                   <router-link id="texDec" to="/comissaoTecnica"> COMISSÃO TECNICA </router-link>
+                </li>
+
+                <li id="itemListaAdm">
+                    <router-link id="texDec" to="/cadJogador"> CADASTRAR JOGADORES </router-link>
+                </li>
+
+                <li id="itemListaAdm">
+                    <router-link id="texDec" to="/listaDeJogadores"> J O G A D O R E S </router-link>
+                </li>
+
+                <li id="itemListaAdm">
+                    <router-link id="texDec" to="/"> F I N A N Ç A S </router-link>
+                </li>
+
+                <li id="itemListaAdm">
+                    <router-link id="texDec" to="/patrocinadores"> P A T R O C I N A D O R E S </router-link>
+                </li>
 
            </ul>
            <ul id="listaBotaoSair">
-               <a href="telaInicial.html"><li id="itemSair"> &nbsp;&nbsp;Sair </li></a>
+              <!-- <a href="telaInicial.html"><li id="itemSair"> &nbsp;&nbsp;Sair </li></a>-->
+               <li id="itemSair">
+                    <router-link id="texDecc" to="/telaInicial"> Sair </router-link>
+                </li>
 
            </ul>
   </div>
@@ -88,7 +115,7 @@ export default {
     top: 5%;
     left: 75%;
     height: 298px;/*ALTURA*/
-    width:  275px; /*LARGURA*/  
+    width:  300px; /*LARGURA*/  
     margin: 2%;
     padding: 0%;   
 }
@@ -111,7 +138,22 @@ export default {
 a:link
 {
 text-decoration:none;/*PARA REMOVER O SUBLINHADO DOS LINKS*/
+color: black;
 }
+
+#texDec
+ {  
+        text-decoration-line: none;/*TIRANDO O SOBRINHADO DO LINK*/
+        color: black;
+        text-shadow: 1px 1px 1px blue, -1px 1px 1px blue,1px -1px 1px blue,1px 1px 1px blue,
+        -1px -1px 1px blue;/*EFEITO COM SOMBRAS PARA DA O CONTORNO DO NOME DO TIME*/
+}
+
+#texDecc
+ {  
+        text-decoration-line: none;/*TIRANDO O SOBRINHADO DO LINK*/
+        color: black;
+ }       
 
 #itemListaAdm:hover{
     background-color:white;

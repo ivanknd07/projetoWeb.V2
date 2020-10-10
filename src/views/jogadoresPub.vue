@@ -1,10 +1,5 @@
 <template>
   <div>
-    teste
-  
-
-
-   
      <img id="planoFundo" src="@/assets/Imagens/torcedorF.jpg" alt="falha...">
 
     <ul  id="nomeTimeCadJogador">
@@ -29,7 +24,7 @@
         </tr>
     </table>
     <li id="botaovoltar" >
-        <input type="button" id="botao_amd" class="botaovoltar" value="INICIO" onclick="window.location='telaInicial.html' ">
+        <input type="button" id="botao_amd" class="botaovoltar" value="INICIO" onclick="window.location='http://localhost:2002' ">
     </li>
       
   </div>
@@ -54,9 +49,9 @@ export default {
 
 #nomeTimeCadJogador{
     margin-left: 37%;/*MARGEM ESQUERDA*/
-    width: 100 px;/*ALTURA*/
+    width: 250px;/*ALTURA*/
     height: 300px;/*LARGURA*/
-    margin-top: 0%;
+    margin-top: 1%;
     color:black;
     font-size: 20px;
     position:absolute;

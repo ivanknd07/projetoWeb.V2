@@ -9,10 +9,24 @@
                         <h6 id="nomeTime">&nbsp;&nbsp;&nbsp;TOP TEAM FUTEBOL CLUB</h6>  
                         <img id="escudo" src="@/assets/Imagens/2.png" alt="falha..."><br> 
                         <ul class="list-group list-group-horizontal divlistaMenu">  
-                           <a href="cadastroTor.html"><li id="divlistaMenu">&nbsp;&nbsp;&nbsp;&nbsp;SEJA TORCEDOR </li></a>                        
-                            <a href=""><li id="divlistaMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!--
+                           <a href="http://localhost:2002/cadastroTor"><li id="divlistaMenu">&nbsp;&nbsp;&nbsp;&nbsp;SEJA TORCEDOR </li></a>                        
+                            <a href="http://localhost:2002/historia"><li id="divlistaMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;HISTORIA</li></a> 
                             <a href=""><li id="divlistaMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONQUISTAS</li></a> 
+                            -->
+                            <li>
+                                <router-link id="divlistaMenu" to="/cadastroTor"> SEJA TORCEDOR </router-link>
+                            </li>
+
+                            <li>
+                                <router-link id="divlistaMenu" to="/historia"> HISTORIA </router-link>
+                            </li>
+
+                            <li>
+                                <router-link id="divlistaMenu" to="/conquistas"> CONQUISTAS </router-link>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -21,16 +35,34 @@
 
                 <ul class="list-group list-group-vertical divLateral">   
                                 <li id="nomeMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENU</li>              
-                                <a id="texDec" href="listJogadoresPub.html"><li id="itensMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENU</li> 
+                                <!--             
+                                <a id="texDec" href="http://localhost:2002/jogadoresPub"><li id="itensMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                  &nbsp;&nbsp;&nbsp; JOGADORES </li></a>
                                 <a id="texDec" href=""><li id="itensMenu">&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;COMISSÃO TECNICA</li></a>
                                 <a id="texDec" href=""><li id="itensMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;DIRETORIA</li></a>             
                                 <a id="texDec" href=""><li id="itensMenu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PATROCINADORES</li></a>
-                              
-                                <br><br>
+                              -->
+
+                            <li id="itensMenu">
+                                <router-link id="texDec" to="/jogadoresPub"> JOGADORES </router-link>
+                            </li>
+
+                            <li id="itensMenu">
+                                <router-link id="texDec" to="/comissaoTecnica"> COMISSÃO TECNICA </router-link>
+                            </li>
+
+                            <li id="itensMenu">
+                                <router-link id="texDec" to="/diretoria"> DIRETORIA </router-link>
+                            </li>  
+
+                            <li id="itensMenu">
+                                <router-link id="texDec" to="/patrocinadores"> PATROCINADORES </router-link>
+                            </li> 
+
+                            <br><br>
 
                                 <form name= "envio">
                                 <li id="Login"><!--LOGIN-->
@@ -93,6 +125,14 @@
 <script>
 export default {
     name: "telaInicial",
+
+    methods: {
+    clique() {
+              this.$router.push({ name: "/cadastroTor", params: { name: "cadastroTor" }
+     }).catch(()=>{});
+     },
+
+    }
 
 }
 </script>
@@ -158,6 +198,11 @@ export default {
     border-color: orange;
 }
 
+a:link
+{
+text-decoration:none;/*PARA REMOVER O SUBLINHADO DOS LINKS*/
+color: black;
+}
 /*------------------------------------------------- DIV MENU LATERAL-----------------------------------------------*/
 .divLateral{
     list-style: none;/*REMOVENDO OS PONTOS DOS ITENS DA LISTA*/
@@ -204,6 +249,7 @@ export default {
 #texDec
  {  
         text-decoration-line: none;/*TIRANDO O SOBRINHADO DO LINK*/
+        color: black;
 }
 
 #Login{

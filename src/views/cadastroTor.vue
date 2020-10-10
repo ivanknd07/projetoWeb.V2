@@ -88,8 +88,8 @@ export default {
     list-style: none;/*PRA SUMIR COM OS MARCADORES DAS LISTAS*/
     display:ruby;
     position: absolute;        
-    top: 20%;
-    margin-left: 25%;
+    top: 15%;
+    margin-left: 24%;
     border: solid 1px;
     border-color:blue;    
     padding: 2%;
