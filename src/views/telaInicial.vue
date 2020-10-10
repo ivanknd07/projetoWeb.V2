@@ -65,15 +65,17 @@
                             <br><br>
 
                                 <form name= "envio">
+                                    <li v-for="telaInicial in telaInicials" :key="telaInicial.email">{{ telaInicial }}</li> 
                                 <li id="Login"><!--LOGIN-->
+
                                     
                                     <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     Email:&nbsp;</label>                    
-                                    <input type="text" size="21" id="email" placeholder=" xxxx@xxxx.xxx "><br>
+                                    <input type="text" size="21" id="email" v-model= "email" placeholder=" xxxx@xxxx.xxx "><br>
                                 
                                     <label for="senha">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                      &nbsp;&nbsp; Senha:&nbsp;</label>                    
-                                    <input type="text" size="20" id="senha">
+                                    <input type="password" size="20" id="senha" v-model= "senha">
                                 </li>
 
                                 <li id="botaoRecSenha"><br><br>                
@@ -82,7 +84,7 @@
                 
                                 <li id="botaoacesso"><br><br> 
 
-                                    <input type="button" class="btn-sm" id="aces" value="Acesso" onclick="validacao(form)">
+                                    <input type="button" class="btn-sm" id="aces" value="Acesso" @click="checkForm">
                                 </li> 
 
                                 </form> 
@@ -126,12 +128,44 @@
 export default {
     name: "telaInicial",
 
-    methods: {
-    clique() {
-              this.$router.push({ name: "/cadastroTor", params: { name: "cadastroTor" }
-     }).catch(()=>{});
-     },
+    data() {
+        return{
+            telaInicial: {},
+            telaInicials: [],
+            email: null,
+            senha: null
+        };
+    },
 
+    methods: {
+        clique() {
+                this.$router.push({ name: "/cadastroTor", params: { name: "cadastroTor" }
+        }).catch(()=>{});
+        },
+
+        checkForm: function () {
+            this.telaInicials = [];
+            var veri = 0;
+
+            if (!this.email) {
+                alert("O e-mail é obrigatório!");
+                return false;
+            } else {
+                if(this.email.indexOf("@") == -1 || this.email.indexOf(".") == -1 
+                    || this.email == "" || this.email.indexOf("@.") != -1) {
+                    alert("O e-mail é inválido!");
+                    this.email.focus();
+                    return false;
+                }              
+            }
+            if (this.email=="admin@gmail.com" && this.senha=="12345678") {
+                window.location="adm";
+                veri = 1;
+            }
+            else if(veri == 0){
+                alert("Usuario não existe");
+            }    
+        }
     }
 
 }
