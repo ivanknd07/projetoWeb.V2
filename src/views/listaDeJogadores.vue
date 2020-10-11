@@ -31,7 +31,7 @@
         </tr>
     </table>
     <li id="botaovoltar" >
-        <input type="button" id="botao_amd" value="VOLTAR para ADM" onclick="window.location='adm.html' ">
+        <input type="button" id="botao_amd" value="VOLTAR para ADM" onclick="window.location='adm' ">
         <input type="button" id="botao_amd" value="apagar todos os cadastros" onclick="limpar()">
     </li>
   </div>
