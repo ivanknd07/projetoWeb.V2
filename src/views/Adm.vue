@@ -51,7 +51,7 @@
            <ul id="listaBotaoSair">
               <!-- <a href="telaInicial.html"><li id="itemSair"> &nbsp;&nbsp;Sair </li></a>-->
                <li id="itemSair">
-                    <router-link id="texDecc" to="/telaInicial"> Sair </router-link>
+                    <router-link id="texDecc" to="/"> Sair </router-link>
                 </li>
 
            </ul>
