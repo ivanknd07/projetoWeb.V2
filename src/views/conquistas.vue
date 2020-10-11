@@ -7,7 +7,7 @@
 
   <div class="col-sm-12"> <h6 id="nomeTimeCadJogador"> TOP TEAM FUTEBOL CLUB </h6> </div>
   
-  <router-link id="texDec" class="botaovoltar col-sm-1" to="telaInicial"> INICIO </router-link>
+  <router-link id="texDec" class="botaovoltar col-sm-1" to="/"> INICIO </router-link>
 
   </div> 
 <!----------------------------------------------------------------------------------------------------------------->
